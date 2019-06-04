@@ -3,7 +3,7 @@ Vanilla JS로 캘린더 + todo list 만들기
 
 ## 구현 목록
 
-![UI](F:\yami03\calendar-todo-project\img\calendar.gif)
+![UI](img/calendar.gif)
 
 1. 달력 UI는 이미지와 똑같이 한다.
 
