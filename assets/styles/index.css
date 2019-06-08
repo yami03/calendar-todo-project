@@ -1,0 +1,347 @@
+html, body {
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #2574D0;
+  font-size: 24px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.calendar-wrap h2 {
+  width: 1px;
+  height: 1px;
+  position:absolute;
+  overflow:hidden;
+  clip:rect(1px 1px 1px 1px);
+  clip:rect(1px, 1px, 1px, 1px)
+}
+
+.calendar-wrap {
+  display: flex;
+  margin: 0 auto;
+  width: 570px;
+  border: 3px solid #000;
+}
+
+.daily {
+  width: 240px;
+}
+
+.daily .day {
+  padding-top: 16px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.daily .date {
+  padding: 70px 0 54px;
+  font-size: 86px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.month-control {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.month-control .month {
+  padding: 0 66px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.month-control button {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  padding: 6px;
+  background-color: initial;
+  line-height: 0;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.month-control .prev-button {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.month-control .next-button {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.calendar-tbl {
+  margin: 20px auto 0;
+  
+}
+
+.calendar-tbl caption {
+  width: 1px;
+  height: 1px;
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px)
+}
+
+.calendar-tbl th,
+.calendar-tbl td {
+  width: 42px;
+  text-align: center;
+}
+
+.calendar-tbl th {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.calendar-tbl td a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.calendar-tbl td a.on {
+  color: #fff;
+  background: #ed0002;
+}
+
+.todo-wrap {
+  margin-top: 20px;
+}
+
+.todo-wrap h2 {
+  color: rgba(175, 47, 47, 0.15);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.todo {
+  width: 572px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+              0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.add-wrap {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.003);
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.add-wrap input[type="checkbox"] {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px)
+}
+
+.add-wrap input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.add-wrap input[type="checkbox"] + label:before {
+  content: '>';
+  display: inline-block;
+  width: 50px;
+  height: 66px;
+  line-height: 58px;
+  text-align: center;
+  color: #e6e6e6;
+  transform: rotate(90deg);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.add-wrap input[type="checkbox"]:checked + label:before {
+  color: #737373;
+}
+
+.add-inpup {
+  width: 500px;
+  height: 66px;
+  border: none;
+  padding: 0 10px;
+  font-size: 28px;
+  color: #4d4d4d;
+  outline: none;
+}
+
+.add-inpup::placeholder {
+  color: #e6e6e6;
+  font-style: italic;
+}
+
+.todo-list li {
+  display: flex;
+  position: relative;
+  padding-left: 50px;
+}
+
+.todo-list li + li {
+  border-top: 1px solid #ededed;
+}
+
+.todo-list li input[type="checkbox"] {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px)
+}
+
+.todo-list input[type="checkbox"] + label {
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border:1px solid #efefef;
+  border-radius: 50%;
+}
+
+.todo-list input[type="checkbox"]:checked + label {
+  border-color: #c7e0dc;
+}
+
+.todo-list input[type="checkbox"]:checked + label:before {
+  content: '\2714';
+  display: block;
+  color: #5dc2af;
+  line-height: 30px;
+  text-align: center;
+}
+
+.todo-list .txt {
+  width: 490px;
+  padding: 16px 10px;
+  word-break: break-all;
+}
+
+.todo-list .txt a{
+  color: #4d4d4d;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.todo-list input[type="checkbox"]:checked + label + .txt a{
+  text-decoration: line-through;
+  color: #d9d9d9;
+}
+
+.todo-list .edit {
+  display: none;
+  width: 522px;
+  height: 60px;
+  padding: 0 10px;
+  font-size: 24px;
+  line-height: 1.2;
+  border: 1px solid #999;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.todo-list .edit.on {
+  display: block;
+}
+
+.todo-list .del {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #cc9a9a;
+  font-weight: bold;
+  font-size: 24px;
+  height: 48px;
+  padding: 10px;
+}
+
+.todo-list .del:hover {
+  color: #af5b5e;
+}
+
+.todo-tab {
+  display: flex;
+  border-top: 1px solid #e6e6e6;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-list {
+  display: flex;
+  margin: 0 auto;
+}
+
+.todo-tab .count {
+  color: #777;
+  font-size: 14px;
+  line-height: 40px;
+  padding: 0 0 0 16px;
+}
+
+.tab-list li a {
+  font-size: 14px;
+}
+
+.tab-list a {
+  display: block;
+  padding: 4px;
+  margin: 0 4px;
+  color: #777;
+}
+
+.tab-list a.on {
+  border: 1px solid #efd5d5;
+  border-radius: 5px;
+}
+
+.todo-tab .clear {
+  color: #777;
+  font-size: 14px;
+  line-height: 40px;
+  margin-right: 14px;
+}
+
+.todo-tab .clear:hover {
+  text-decoration: underline;
+}
