@@ -31,20 +31,21 @@ h1 {
   margin: 0 auto;
 }
 
+.calendar-wrap {
+  display: flex;
+  width: 570px;
+  height: 262px;
+  margin: 0 auto;
+  border: 3px solid #000;
+}
+
 .calendar-wrap h2 {
   width: 1px;
   height: 1px;
-  position:absolute;
-  overflow:hidden;
-  clip:rect(1px 1px 1px 1px);
-  clip:rect(1px, 1px, 1px, 1px)
-}
-
-.calendar-wrap {
-  display: flex;
-  margin: 0 auto;
-  width: 570px;
-  border: 3px solid #000;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px)
 }
 
 .daily {
@@ -71,7 +72,9 @@ h1 {
 }
 
 .month-control .month {
-  padding: 0 66px;
+  display: inline-block;
+  text-align: center;
+  width: 230px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -84,6 +87,7 @@ h1 {
   line-height: 0;
   font-size: 0;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .month-control .prev-button {
@@ -126,6 +130,7 @@ h1 {
   display: block;
   width: 100%;
   height: 100%;
+  color: #000;
   font-size: 12px;
   font-weight: bold;
   line-height: 24px;
@@ -193,7 +198,7 @@ h1 {
   color: #737373;
 }
 
-.add-inpup {
+.add-input {
   width: 500px;
   height: 66px;
   border: none;
@@ -255,12 +260,13 @@ h1 {
   width: 490px;
   padding: 16px 10px;
   word-break: break-all;
-}
-
-.todo-list .txt a{
   color: #4d4d4d;
   font-size: 24px;
   line-height: 1.2;
+}
+
+.todo-list .txt.hide {
+  display: none;
 }
 
 .todo-list input[type="checkbox"]:checked + label + .txt a{
@@ -301,10 +307,14 @@ h1 {
 }
 
 .todo-tab {
-  display: flex;
+  display: none;
   border-top: 1px solid #e6e6e6;
   align-items: center;
   justify-content: center;
+}
+
+.todo-tab.on {
+  display: flex;
 }
 
 .tab-list {
@@ -321,9 +331,6 @@ h1 {
 
 .tab-list li a {
   font-size: 14px;
-}
-
-.tab-list a {
   display: block;
   padding: 4px;
   margin: 0 4px;
