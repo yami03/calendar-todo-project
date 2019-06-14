@@ -46,7 +46,7 @@
 
     <div class="todo">
       <div class="add-wrap">
-        <input type="checkbox" id="check-all">
+        <input type="checkbox" id="check-all" class="check-all">
         <label for="check-all"></label>
         <input type="text" class="add-input" placeholder="What needs to be done?">
       </div>
@@ -59,9 +59,9 @@
       <div class="todo-tab">
         <span class="count">0 items left</span>
         <ul class="tab-list">
-          <li><a href="#All" class="all on">All</a></li>
-          <li><a href="#Active" class="active">Active</a></li>
-          <li><a href="#Completed" class="completed">Completed</a></li>
+          <li><a href="#All" class="all on" data-type="all">All</a></li>
+          <li><a href="#Active" class="active" data-type="active">Active</a></li>
+          <li><a href="#Completed" class="completed" data-type="completed">Completed</a></li>
         </ul>
         <a href="#" class="clear">Clear completed</a>
       </div>

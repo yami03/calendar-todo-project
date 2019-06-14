@@ -208,7 +208,7 @@ h1 {
   outline: none;
 }
 
-.add-inpup::placeholder {
+.add-input::placeholder {
   color: #e6e6e6;
   font-style: italic;
 }
@@ -221,6 +221,10 @@ h1 {
 
 .todo-list li + li {
   border-top: 1px solid #ededed;
+}
+
+.todo-list li.hide {
+  display: none;
 }
 
 .todo-list li input[type="checkbox"] {
@@ -256,6 +260,10 @@ h1 {
   text-align: center;
 }
 
+.todo-list input[type="checkbox"] + label.hide {
+  display: none;
+}
+
 .todo-list .txt {
   width: 490px;
   padding: 16px 10px;
@@ -269,7 +277,7 @@ h1 {
   display: none;
 }
 
-.todo-list input[type="checkbox"]:checked + label + .txt a{
+.todo-list input[type="checkbox"]:checked + label + .txt{
   text-decoration: line-through;
   color: #d9d9d9;
 }
@@ -306,6 +314,10 @@ h1 {
   color: #af5b5e;
 }
 
+.todo-list .del.hide {
+  display: none;
+}
+
 .todo-tab {
   display: none;
   border-top: 1px solid #e6e6e6;
@@ -314,7 +326,7 @@ h1 {
 }
 
 .todo-tab.on {
-  display: flex;
+  display: block;
 }
 
 .tab-list {
@@ -343,10 +355,15 @@ h1 {
 }
 
 .todo-tab .clear {
+  display: none;
   color: #777;
   font-size: 14px;
   line-height: 40px;
   margin-right: 14px;
+}
+
+.todo-tab .clear.on {
+  display: block;
 }
 
 .todo-tab .clear:hover {
